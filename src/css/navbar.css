@@ -1,0 +1,62 @@
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  background-color: var(--mainLight);
+  height: 83px;
+  width: 100%;
+  z-index: 10; 
+}
+
+
+
+/* Navbar Logo */
+.navbar-logo { display: flex; }
+.navbar-logo {margin-left: 3.06%;}
+.navbar-logo img{ width: 113px; height: 113px; margin-top: 13px;}
+.navbar-logo h1{margin-left: -18px; margin-top: 27px;}
+
+/* Navbar List */
+.navbar-navlist{ display: flex; }
+.nav-list{ 
+  position: relative;
+  margin: 0 21.25px 0 21.25px; 
+  text-align: center;
+  padding: 30px 21.25px 0 21.25px;
+  transition: all .3s;
+}
+.nav-list a {
+  color: var(--mainDark);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer; 
+}
+.nav-number{
+  background-color: red;
+  color: var(--mainWhite); 
+  text-align: center;
+  padding: 0 6px; 
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 8%;
+  font-size: 12px;
+  font-weight: bold;
+}
+.navbar-navlist .active {
+  background-color: var(--yellowOP20) !important;
+  height: 34px; 
+  padding-top: 38px;
+  box-shadow: var(--dropshadowMain);
+  border-radius: 0 0 8px 8px;
+  transition: all .5s !important;
+}
+.navbar-navlist .active .nav-number {
+  top: 30px;
+  right: 8%;
+}

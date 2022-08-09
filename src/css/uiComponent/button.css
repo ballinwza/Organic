@@ -1,0 +1,24 @@
+.btn{
+    width: 151px;
+    height: 40px;
+    background-color: var(--mainDark);
+    box-shadow: var(--dropshadowMain);
+    color: var(--mainWhite);
+    border-radius: var(--radiusMain);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all .1s ease-out;
+}
+
+.btn:hover{
+    background-color: var(--mainWhite);
+    color: var(--mainDark);
+    transition: all .2s ease-out;
+}
+.btn:active{ 
+    background-color: red;
+    color: white; 
+    transition: all .1s ease-out;
+}
+.btn-mainDark{ background-color: var(--mainDark)}

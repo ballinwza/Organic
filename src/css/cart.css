@@ -1,0 +1,10 @@
+.cart-head, .cart-body{
+    display: flex;
+    justify-content: space-around; 
+    text-align: center;
+    width: 100%;
+}
+
+.cart-head-list, .cart-body-list {
+    width: 20%;
+}
