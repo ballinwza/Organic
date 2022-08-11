@@ -10,15 +10,22 @@ export const showNavbar = ()=>{
     document.getElementById("mainNavbar").classList.remove("d-none")
 }
 
+export const initialStateNavbar = [
+    {id:"navlist1", status: "active"},
+    {id:"navlist2", status: ""},
+    {id:"navlist3", status: ""},
+    {id:"navlist4", status: ""},
+    {id:"logo", status:""}
+]
+
 export const Navbar = () =>{
     const {user} = useSelector(state=>state.auth) 
-    const dispatch = useDispatch()
-
+    const dispatch = useDispatch() 
     const [navlist, setNavlist]= useState([
         {id:"navlist1", status: "active"},
         {id:"navlist2", status: ""},
         {id:"navlist3", status: ""},
-        {id:"navlist4", status: ""},
+        {id:"navlist4", status: ""}, 
     ])
 
     const updateState = (id) => {
@@ -36,7 +43,7 @@ export const Navbar = () =>{
       const UnAuthNavbar = ()=>{ 
         return(
             <div className={`navbar`}>
-                <div className="navbar-logo">
+                <div className="navbar-logo" onClick={()=>setNavlist(initialStateNavbar)}>
                     <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
                     <Link to="/"><h1>ORGANIC</h1></Link>
                 </div>
@@ -47,7 +54,7 @@ export const Navbar = () =>{
                     </div>
 
                     <div id={navlist[3].id} className={`nav-list ${navlist[3].status}`}>
-                        <Link to="/signin" onClick={()=>updateState(navlist[3].id)}>Sign In</Link>
+                        <Link to="/signin">Sign In</Link>
                     </div>
                 </div>
 
@@ -67,9 +74,9 @@ export const Navbar = () =>{
 
         return(
             <div className="navbar">
-                <div className="navbar-logo">
-                    <img src={require("../images/Logo01.png")} alt="organic-logo"/>
-                    <h1>ORGANIC</h1>
+                <div className="navbar-logo" onClick={()=>setNavlist(initialStateNavbar)}>
+                    <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
+                    <Link to="/"><h1>ORGANIC</h1></Link>
                 </div>
 
                 <div className="navbar-navlist">

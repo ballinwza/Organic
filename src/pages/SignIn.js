@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import {useState} from 'react'
 import {fetchAuthAsync} from '../redux/actions/authAction'
 import { Link, useNavigate } from "react-router-dom"
-import { hideNavbar } from "../components/Navbar"
+import { hideNavbar } from "../components/Navbar" 
 
 export const SignIn = () =>{
     const [email, setEmail] = useState('')
@@ -18,7 +18,7 @@ export const SignIn = () =>{
 
             <div className="signin-card-container">
                 <div className="signin-card-container-header">
-                    <Link to="/"><img src={require("../images/Logo02.png")} alt="organic"/></Link>
+                    <Link to="/" ><img src={require("../images/Logo02.png")} alt="organic"/></Link>
                     <Link to="/"><h1>ORGANIC</h1></Link>
                     <h3>Sign in Your Account</h3>
                 </div>
