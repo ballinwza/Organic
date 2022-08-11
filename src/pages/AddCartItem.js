@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addCartList } from "../redux/actions/cartAction"
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom" 
+import { showNavbar } from "../components/Navbar"
 
 export const AddCartItem = () =>{
     const [title, setTitle] = useState("")
@@ -27,7 +28,7 @@ export const AddCartItem = () =>{
     }
 
     return(
-        <div>
+        <div onLoad={()=>showNavbar()}> 
             title<input type="text" name="title" onChange={(e)=>setTitle(e.target.value)}/><br/>
             price<input type="number" name="price" onChange={(e)=>setPrice(e.target.value)}/><br/>
 

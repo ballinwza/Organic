@@ -2,7 +2,7 @@
 .justify-content-between {justify-content: space-between;}
 .justify-content-around {justify-content: space-around;}
 .justify-content-center {justify-content: center;}
-.d-none {display: none;}
+.d-none {display: none !important;}
 a {text-decoration: none; cursor: pointer;}
 
 :root{
@@ -31,9 +31,9 @@ a {text-decoration: none; cursor: pointer;}
          url('../fonts/karma-v16-latin-regular.svg#Karma') format('svg'); /* Legacy iOS */
 } 
 
-h1 { font-size: 32px; font-weight: 600; } 
-h2 { font-size: 24px; font-weight: 600; }
-h3 { font-size: 20px; font-weight: 600; }
+h1 { font-size: 32px; font-weight: 500; } 
+h2 { font-size: 24px; font-weight: 500; }
+h3 { font-size: 20px; font-weight: 500; }
 p, span {font-size: 16px; font-weight: normal;}
 
 body {

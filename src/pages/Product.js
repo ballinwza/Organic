@@ -1,5 +1,5 @@
 import { ProductList } from "../components/ProductList"
-
+import { showNavbar } from "../components/Navbar"
 
 export const Product = () =>{
     const lorem = `Lorum Ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -11,8 +11,8 @@ export const Product = () =>{
     anim id est laborum.`
 
     return(
-        <div>
-            <div className="d-flex">
+        <div> 
+            <div className="d-flex" onLoad={()=>showNavbar()}>
                 <div className="product-detail">
                     <h2>HEAD PARAGRAPH</h2>
                     {lorem}

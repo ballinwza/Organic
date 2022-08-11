@@ -1,11 +1,18 @@
 import { useSelector, useDispatch } from "react-redux"
 import {Link} from 'react-router-dom'
 import { setAuth } from "../redux/actions/authAction"
-import { useState } from "react"
+import { useState } from "react" 
 
+export const hideNavbar = ()=>{
+    document.getElementById("mainNavbar").classList.add("d-none")
+}
+export const showNavbar = ()=>{
+    document.getElementById("mainNavbar").classList.remove("d-none")
+}
 
 export const Navbar = () =>{
-    const {user} = useSelector(state=>state.auth)
+    const {user} = useSelector(state=>state.auth) 
+    const dispatch = useDispatch()
 
     const [navlist, setNavlist]= useState([
         {id:"navlist1", status: "active"},
@@ -23,15 +30,15 @@ export const Navbar = () =>{
           }
           return obj;
         });
-        setNavlist(newState);
-      };
+        setNavlist(newState); 
+    }; 
 
-      const UnAuthNavbar = ()=>{
+      const UnAuthNavbar = ()=>{ 
         return(
-            <div className="navbar">
+            <div className={`navbar`}>
                 <div className="navbar-logo">
-                    <img src={require("../images/Logo01.png")} alt="organic-logo"/>
-                    <h1>ORGANIC</h1>
+                    <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
+                    <Link to="/"><h1>ORGANIC</h1></Link>
                 </div>
 
                 <div className="navbar-navlist">
@@ -51,8 +58,8 @@ export const Navbar = () =>{
 
     const AuthNavbar = ()=>{
         let cart = useSelector((state)=>{return state.cart})
-        const {user} = useSelector(state=>state.auth)
-        const dispatch = useDispatch()
+        const {user} = useSelector(state=>state.auth) 
+
         const setNull = ()=>{
             dispatch(setAuth(null));
             dispatch(cart=[])
@@ -89,7 +96,7 @@ export const Navbar = () =>{
     }
 
     return(
-        <div className="navbar">
+        <div id="mainNavbar" className={`navbar`} >
             {user ? <AuthNavbar/> : <UnAuthNavbar/>}
         </div>
     )

@@ -5,15 +5,14 @@ import { Cart } from "./pages/Cart"
 import {Product} from './pages/Product'
 import {SignIn} from './pages/SignIn'
 import {Navbar} from './components/Navbar'
-import { AddCartItem } from "./pages/AddCartItem"
+import { AddCartItem } from "./pages/AddCartItem" 
 
 import { useSelector } from "react-redux" 
 
 const UnauthApp = () =>{
   return( 
-      <div className="main-container">
-        <Navbar/> 
-      
+      <div className="main-container"> 
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Product/>}/> 
           <Route path='/signin' element={<SignIn/>}/> 
@@ -26,9 +25,8 @@ const UnauthApp = () =>{
 
 const AuthApp = ()=>{ 
   return( 
-      <div className="main-container">
-        <Navbar/> 
-      
+      <div className="main-container"> 
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Product/>}/>
           <Route path='/cart' element={<Cart/>}/>
@@ -40,9 +38,10 @@ const AuthApp = ()=>{
 } 
 
 const App = ()=>{ 
-  const {user} = useSelector(state=>state.auth)
+  const {user} = useSelector(state=>state.auth) 
+
   return(
-    <BrowserRouter>
+    <BrowserRouter> 
       {!user ? <UnauthApp/> : <AuthApp/>}
     </BrowserRouter>
   )

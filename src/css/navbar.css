@@ -10,7 +10,7 @@
   background-color: var(--mainLight);
   height: 83px;
   width: 100%;
-  z-index: 10; 
+  z-index: 10;  
 }
 
 
@@ -20,6 +20,8 @@
 .navbar-logo {margin-left: 3.06%;}
 .navbar-logo img{ width: 113px; height: 113px; margin-top: 13px;}
 .navbar-logo h1{margin-left: -18px; margin-top: 27px;}
+.navbar-logo a{color: var(--mainDark) !important;} 
+
 
 /* Navbar List */
 .navbar-navlist{ display: flex; }
@@ -33,7 +35,7 @@
 .nav-list a {
   color: var(--mainDark);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer; 
 }
 .nav-number{

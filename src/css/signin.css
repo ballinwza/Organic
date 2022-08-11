@@ -1,0 +1,53 @@
+ .signin-container{
+    position: relative;
+    height: 100vh;
+    z-index: 1000;
+ }
+
+ .signin-container .imgBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+ }
+
+ .signin-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: linear-gradient(to bottom, rgba(128,144,81,0.7), rgba(245, 255, 218, 0.4));
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 80%;
+    border-radius: 10px;
+    text-align: center; 
+ } 
+
+ .signin-card-container div {
+    height: auto;
+    width: 100%;
+ }
+
+ .signin-card-container input{
+    width: 563px;
+ }
+
+ /* Header */
+ .signin-card-container-header {
+    position: relative;
+    margin-top: 40px;
+ }
+ .signin-card-container-header h1 {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to bottom, rgb(45,57,20),rgba(45,57,20,0.2));
+    background-clip: text;
+    color: transparent;
+ }

@@ -2,7 +2,7 @@ import { FETCH_START, FETCH_END, FETCH_ERROR } from "../actions/statusAction";
 
 const initialState = {
     loading: false,
-    error: ""
+    error: "", 
 }
 
 export const statusReducer = (state=initialState, action) =>{
@@ -21,7 +21,7 @@ export const statusReducer = (state=initialState, action) =>{
             return {
                 ...state,
                 error: action.payload
-            };
+            }; 
         default:
             return state
     }
