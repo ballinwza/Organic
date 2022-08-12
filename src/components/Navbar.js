@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import {Link} from 'react-router-dom'
 import { setAuth } from "../redux/actions/authAction"
-import { useState } from "react" 
+import { useState } from "react"
 
 export const hideNavbar = ()=>{
     document.getElementById("mainNavbar").classList.add("d-none")
@@ -19,13 +19,13 @@ export const initialStateNavbar = [
 ]
 
 export const Navbar = () =>{
-    const {user} = useSelector(state=>state.auth) 
-    const dispatch = useDispatch() 
+    const {user} = useSelector(state=>state.auth)
+    const dispatch = useDispatch()
     const [navlist, setNavlist]= useState([
         {id:"navlist1", status: "active"},
         {id:"navlist2", status: ""},
         {id:"navlist3", status: ""},
-        {id:"navlist4", status: ""}, 
+        {id:"navlist4", status: ""},
     ])
 
     const updateState = (id) => {
@@ -37,18 +37,47 @@ export const Navbar = () =>{
           }
           return obj;
         });
-        setNavlist(newState); 
-    }; 
+        setNavlist(newState);
+    };
 
-      const UnAuthNavbar = ()=>{ 
+    const NavItem = ({id, to, content, className, onClick}) =>{
         return(
-            <div className={`navbar`}>
+            <li id={`${id}`} className="nav-item">
+                <Link to={`${to}`} className={`nav-link ${className}`} onClick={onClick}>{content}</Link>
+            </li>
+        )
+    }
+    const Test = () =>{
+        return(
+            <nav className="navbar navbar-expand-md bg-light">
+                <div className="container-fluid">
+                    <div className="navbar-brand" onClick={()=>setNavlist(initialStateNavbar)}>
+                        <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
+                        <Link to="/"><h1>ORGANIC</h1></Link>
+                    </div>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#testNav">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="testNav">
+                        <ul className="navbar-nav">
+                            <NavItem to="/" id={navlist[0].id} className={navlist[0].status} content="Prodcut" onClick={()=>updateState(navlist[0].id)}/>
+                            <NavItem to="/signin" id={navlist[3].id} className={navlist[3].status} content="Sign In"/>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        )
+    }
+    const UnAuthNavbar = ()=>{
+        return(
+            <div className={`navbar `}> {/*navbar-expand-sm*/}
                 <div className="navbar-logo" onClick={()=>setNavlist(initialStateNavbar)}>
                     <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
                     <Link to="/"><h1>ORGANIC</h1></Link>
                 </div>
 
-                <div className="navbar-navlist">
+                <div id="navbarText" className="navbar-navlist">
                     <div id={navlist[0].id} className={`nav-list ${navlist[0].status}`} >
                         <Link to="/" onClick={()=>updateState(navlist[0].id)}>Products</Link>
                     </div>
@@ -57,15 +86,13 @@ export const Navbar = () =>{
                         <Link to="/signin">Sign In</Link>
                     </div>
                 </div>
-
-
             </div>
         )
     }
 
     const AuthNavbar = ()=>{
         let cart = useSelector((state)=>{return state.cart})
-        const {user} = useSelector(state=>state.auth) 
+        const {user} = useSelector(state=>state.auth)
 
         const setNull = ()=>{
             dispatch(setAuth(null));
@@ -104,7 +131,8 @@ export const Navbar = () =>{
 
     return(
         <div id="mainNavbar" className={`navbar`} >
-            {user ? <AuthNavbar/> : <UnAuthNavbar/>}
+            {/* {user ? <AuthNavbar/> : <UnAuthNavbar/>} */}
+            {<Test/>}
         </div>
     )
 }

@@ -1,24 +1,26 @@
-.btn{
-    width: 151px;
-    height: 40px;
-    background-color: var(--mainDark);
+.myBtn{
+    width: 100%;
+    height: 4rem; 
     box-shadow: var(--dropshadowMain);
     color: var(--mainWhite);
     border-radius: var(--radiusMain);
-    text-transform: uppercase;
-    cursor: pointer;
+    text-transform: uppercase; 
     border: none;
     transition: all .1s ease-out;
 }
-
-.btn:hover{
+.myBtn151 {width: 15.1rem !important;}
+.myBtn:hover{
     background-color: var(--mainWhite);
     color: var(--mainDark);
     transition: all .2s ease-out;
 }
-.btn:active{ 
+.myBtn:active{ 
     background-color: red;
     color: white; 
     transition: all .1s ease-out;
 }
 .btn-mainDark{ background-color: var(--mainDark)}
+
+.btn-container{
+    width: 100%;
+}

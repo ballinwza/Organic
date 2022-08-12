@@ -1,9 +1,8 @@
-.d-flex{display: flex;}
-.justify-content-between {justify-content: space-between;}
-.justify-content-around {justify-content: space-around;}
-.justify-content-center {justify-content: center;}
 .d-none {display: none !important;}
 a {text-decoration: none; cursor: pointer;}
+.relative{position: relative;}
+
+.mainDark-color {color: var(--mainDark);}
 
 :root{
     --mainDark : #2D3914;
@@ -16,6 +15,8 @@ a {text-decoration: none; cursor: pointer;}
 
     --dropshadowMain: 1px 2px 5px 0 rgba(0,0,0,0.25);
     --radiusMain: 8px;
+
+    font-size: 10px;
 } 
 /* karma-regular - latin */
 @font-face {
@@ -31,16 +32,17 @@ a {text-decoration: none; cursor: pointer;}
          url('../fonts/karma-v16-latin-regular.svg#Karma') format('svg'); /* Legacy iOS */
 } 
 
-h1 { font-size: 32px; font-weight: 500; } 
-h2 { font-size: 24px; font-weight: 500; }
-h3 { font-size: 20px; font-weight: 500; }
-p, span {font-size: 16px; font-weight: normal;}
+
+h1 { font-size: 3.2rem; font-weight: 500; } 
+h2 { font-size: 2.4rem; font-weight: 500; }
+h3 { font-size: 2rem; font-weight: 500; }
+p, span {font-size: 1.6rem; font-weight: normal;}
 
 body {
     margin: 0;
     font-family: 'Karma';
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale; 
   }
   
   code {

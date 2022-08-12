@@ -1,0 +1,35 @@
+/*Main Navbar*/
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; 
+    position: sticky;
+    z-index: 10;
+    
+}
+.container-fluid{ 
+    display: flex; 
+    user-select: none;
+    background-color: var(--mainLight);
+    height: 83px;
+    width: 100%; 
+    justify-content: space-between;
+} 
+
+/*Navbar Brand*/
+.navbar-brand { display: flex;  } 
+.navbar-brand img{ 
+    width: 113px; 
+    height: 113px; 
+
+}
+.navbar-brand h1{ 
+    margin: 20px;
+}
+.navbar-brand a{color: var(--mainDark) !important;} 
+
+
+.navbar-collapse{
+    justify-content: end;
+}

@@ -8,7 +8,7 @@
   justify-content: space-between;
   user-select: none;
   background-color: var(--mainLight);
-  height: 83px;
+  height: 8.6rem;
   width: 100%;
   z-index: 10;  
 }
@@ -18,8 +18,8 @@
 /* Navbar Logo */
 .navbar-logo { display: flex; }
 .navbar-logo {margin-left: 3.06%;}
-.navbar-logo img{ width: 113px; height: 113px; margin-top: 13px;}
-.navbar-logo h1{margin-left: -18px; margin-top: 27px;}
+.navbar-logo img{ width: 11.3rem; height: 11.3rem; margin-top: 1.3rem;}
+.navbar-logo h1{margin-left: -1.8rem; margin-top: 2.7rem;}
 .navbar-logo a{color: var(--mainDark) !important;} 
 
 
@@ -27,14 +27,14 @@
 .navbar-navlist{ display: flex; }
 .nav-list{ 
   position: relative;
-  margin: 0 21.25px 0 21.25px; 
+  margin: 0 2.125rem 0 2.125rem; 
   text-align: center;
-  padding: 30px 21.25px 0 21.25px;
+  padding: 3.0rem 2.125rem 0 2.125rem;
   transition: all .3s;
 }
 .nav-list a {
   color: var(--mainDark);
-  font-size: 20px;
+  font-size: 2.0rem;
   font-weight: 500;
   cursor: pointer; 
 }
@@ -42,23 +42,23 @@
   background-color: red;
   color: var(--mainWhite); 
   text-align: center;
-  padding: 0 6px; 
+  padding: 0 0.6rem; 
   border-radius: 50%;
   position: absolute;
-  top: 20px;
+  top: 2.0rem;
   right: 8%;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .navbar-navlist .active {
   background-color: var(--yellowOP20) !important;
-  height: 34px; 
-  padding-top: 38px;
+
+  padding-top: 3.8rem;
   box-shadow: var(--dropshadowMain);
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 0.8rem 0.8rem;
   transition: all .5s !important;
 }
 .navbar-navlist .active .nav-number {
-  top: 30px;
+  top: 3.0rem;
   right: 8%;
 }

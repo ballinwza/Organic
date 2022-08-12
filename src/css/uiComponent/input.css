@@ -2,10 +2,11 @@ input {
     font-family: "Karma";
     border: thin solid rgba(0,0,0,.3);
     background: white;
-    font-size: 16px;
-    padding-left: 12px;
-    height: 40px;
-    border-radius: 5px;
+    font-size: 1.6rem;
+    padding-left: 1.2rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    width: 100%;
 }
 input:focus{
     outline: none;
@@ -13,5 +14,5 @@ input:focus{
 
 input::placeholder {
     font-family: "Karma";
-    font-size: 16px;
+    font-size: 1.6rem;
 }

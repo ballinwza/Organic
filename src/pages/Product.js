@@ -15,8 +15,10 @@ export const Product = () =>{
             <div className="d-flex" onLoad={()=>showNavbar()}>
                 <div className="product-detail">
                     <h2>HEAD PARAGRAPH</h2>
-                    {lorem}
-                    {lorem} 
+                    <p>
+                        {lorem}
+                        {lorem} 
+                    </p>
                 </div>
                 <div className="product-image">
                     <img src={require("../images/productDetail-01.jpg")} alt="" />

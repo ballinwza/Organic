@@ -1,5 +1,4 @@
-
-export const user = [
+ export const user = [
     {
         id: 'a',
         username: 'Somsak',
@@ -7,7 +6,7 @@ export const user = [
         password: '1234'
     }
 ]
-
+ 
 export function signin(email, password){
     return new Promise((resolve, reject)=>{
         const foundUser = user.find(
@@ -17,8 +16,8 @@ export function signin(email, password){
             if (foundUser){
                 resolve(foundUser) 
             }else{
-                reject ('Email or Password was invalid')
+                reject (true)
             }
-        }, 1000)
+        }, 2000)
     })
 }
