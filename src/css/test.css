@@ -1,20 +1,17 @@
 /*Main Navbar*/
 .navbar {
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     width: 100%; 
-    position: sticky;
     z-index: 10;
     
 }
 .container-fluid{ 
-    display: flex; 
-    user-select: none;
     background-color: var(--mainLight);
-    height: 83px;
+    height: 83px !important;
     width: 100%; 
-    justify-content: space-between;
 } 
 
 /*Navbar Brand*/
@@ -22,14 +19,55 @@
 .navbar-brand img{ 
     width: 113px; 
     height: 113px; 
-
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 .navbar-brand h1{ 
-    margin: 20px;
+    margin: 20px 0 20px 115px;
 }
 .navbar-brand a{color: var(--mainDark) !important;} 
 
 
 .navbar-collapse{
     justify-content: end;
+    align-items: end;
+    height: 100%;
 }
+.navbar-nav{
+    height: 100%;
+}
+.nav-item{ 
+    position: relative;
+    align-self: flex-end;
+    padding: 0 20px; 
+    margin: 20px 10px;
+    transition: all .1s;
+} 
+.navbar-nav .active {
+    background-color: var(--yellowOP20) !important; 
+    box-shadow: var(--dropshadowMain);
+    border-radius: 0 0 0.8rem 0.8rem; 
+    padding: 23px 20px 0 20px; 
+    margin: 20px 10px;
+    transition: all .5s !important; 
+}
+.nav-item a {
+    color: var(--mainDark);
+    font-size: 2.0rem;
+    font-weight: 500;
+    cursor: pointer; 
+}
+
+.nav-number{
+    background-color: red;
+    color: var(--mainWhite); 
+    text-align: center;
+    padding: 0 0.6rem; 
+    border-radius: 50%;
+    position: absolute;
+    bottom: 24px;
+    right: 9%;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
