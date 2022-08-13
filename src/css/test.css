@@ -29,6 +29,7 @@
 .navbar-brand a{color: var(--mainDark) !important;} 
 
 
+/* Navbar List */
 .navbar-collapse{
     justify-content: end;
     align-items: end;
@@ -70,4 +71,40 @@
     right: 9%;
     font-size: 1.2rem;
     font-weight: bold;
-  }
+} 
+
+/* Media 991px Bootstrap Lg*/
+@media only screen and (max-width: 991.5px){
+    .navbar-toggler{ 
+        margin-right: 20px;
+        border: 1px solid var(--mainDark);
+    }
+    .navbar-toggler:focus{
+        box-shadow: none; 
+    }
+    .nav-item{
+        background-color: var(--secondLight);
+        padding: 10px 20px;
+        margin: 5px 0;
+        width: 200px;
+        text-align: end;
+        box-shadow: var(--dropshadowMain);
+        border-radius: 10px 0 0 10px;
+    }
+    .nav-link{
+        color: var(--mainDark);
+    }
+    .navbar-nav .active{
+        background-color: var(--mainDark) !important;
+        padding: 10px 20px;
+        margin: 0;
+        border-radius: 10px 0 0 10px;
+    }
+    .navbar-nav .active .nav-link{
+        color: var(--mainWhite);
+    }
+    .nav-number{
+        bottom: 39%;
+        right: 32%; 
+    }
+}

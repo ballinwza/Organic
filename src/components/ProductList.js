@@ -26,7 +26,7 @@ export const ProductList = ()=>{
                             </div>
                         </div>
                     )
-                })  
+                })   
             }
         </div>
     )

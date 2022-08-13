@@ -12,19 +12,25 @@ export const Product = () =>{
 
     return(
         <div> 
-            <div className="d-flex" onLoad={()=>showNavbar()}>
-                <div className="product-detail">
-                    <h2>HEAD PARAGRAPH</h2>
-                    <p>
-                        {lorem}
-                        {lorem} 
-                    </p>
+            <div className="row" onLoad={()=>showNavbar()}>
+                <div className="col-12 col-lg-6">
+                    <div className="product-detail">
+                        <h2>HEAD PARAGRAPH</h2>
+                        <p>
+                            {lorem}
+                            {lorem}
+                        </p>
+                    </div>
                 </div>
-                <div className="product-image">
-                    <img src={require("../images/productDetail-01.jpg")} alt="" />
+                <div className="col-12 col-lg d-flex align-center">
+                    <div className="product-image">
+                        <img src={require("../images/productDetail-01.jpg")} alt="" />
+                    </div> 
                 </div>
             </div>
-            <ProductList/>
+            <div className="row">
+                <ProductList/>
+            </div>
         </div> 
     )
 

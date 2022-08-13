@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import {Link} from 'react-router-dom'
 import { setAuth } from "../redux/actions/authAction"
 import { useState } from "react"
+import { NavItem } from "./uiComponents/NavItem"
 
 export const hideNavbar = ()=>{
     document.getElementById("mainNavbar").classList.add("d-none")
@@ -40,16 +41,10 @@ export const Navbar = () =>{
         setNavlist(newState);
     };
 
-    const NavItem = ({id, to, content, className, onClick}) =>{
-        return(
-            <li id={`${id}`} className={`nav-item ${className}`}>
-                <Link to={`${to}`} className={`nav-link`} onClick={onClick}>{content}</Link>
-            </li> 
-        )
-    } 
+
     const UnAuthNavbar = ()=>{
         return(
-            <nav className="navbar navbar-expand-md bg-light">
+            <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container-fluid">
                     <div className="navbar-brand" onClick={()=>setNavlist(initialStateNavbar)}>
                         <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
@@ -80,7 +75,7 @@ export const Navbar = () =>{
         }
 
         return(
-            <nav className="navbar navbar-expand-md bg-light">
+            <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <div className="navbar-brand" onClick={()=>setNavlist(initialStateNavbar)}>
                         <Link to ="/"><img src={require("../images/Logo01.png")} alt="organic-logo"/></Link>
@@ -110,8 +105,7 @@ export const Navbar = () =>{
 
     return(
         <div id="mainNavbar" className={`navbar`} >
-            {user ? <AuthNavbar/> : <UnAuthNavbar/>}
-
+            {user ? <AuthNavbar/> : <UnAuthNavbar/>} 
         </div>
     )
 }

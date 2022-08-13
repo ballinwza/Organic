@@ -1,7 +1,7 @@
 .d-none {display: none !important;}
 a {text-decoration: none; cursor: pointer;}
 .relative{position: relative;}
-
+.align-center {align-items: center;}
 .mainDark-color {color: var(--mainDark);}
 
 :root{
@@ -36,16 +36,32 @@ a {text-decoration: none; cursor: pointer;}
 h1 { font-size: 3.2rem; font-weight: 500; } 
 h2 { font-size: 2.4rem; font-weight: 500; }
 h3 { font-size: 2rem; font-weight: 500; }
-p, span {font-size: 1.6rem; font-weight: normal;}
+p, span, a {font-size: 1.6rem; font-weight: normal;}
 
-body {
-    margin: 0;
-    font-family: 'Karma';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  } 
+body { 
+  margin: 0; 
+  font-family: 'Karma'; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+} 
+
+code { 
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', 
+  monospace; 
+} 
+
+/* Bootstrap Md */
+@media only screen and (max-width: 768px){
+  h1 { font-size: 3rem; font-weight: 500; } 
+  h2 { font-size: 2.2rem; font-weight: 500; }
+  h3 { font-size: 1.8rem; font-weight: 500; }
+  p, span, a {font-size: 1.4rem; font-weight: normal;}
+}
+
+/*Bootstrap Sm*/
+@media only screen and (max-width: 576px){
+  h1 { font-size: 2.8rem; font-weight: 500; } 
+  h2 { font-size: 2rem; font-weight: 500; }
+  h3 { font-size: 1.6rem; font-weight: 500; }
+  p, span, a {font-size: 1.2rem; font-weight: normal;}
+}

@@ -15,7 +15,7 @@
     transition: all .2s ease-out;
 }
 .myBtn:active{ 
-    background-color: red;
+    background-color: var(--mainDark);
     color: white; 
     transition: all .1s ease-out;
 }
