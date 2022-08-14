@@ -1,10 +1,68 @@
-.cart-head, .cart-body{
+/* Cart.js */
+.cart-container{
+    background-color: rgba(0,0,0,0.1);
+    min-height: 89vh;
+}
+.cart-container h3 {
+    margin: 0;
+}
+.cart-left, .cart-right{
+    background-color: var(--mainWhite);
+    margin: 50px 20px;
+    padding: 30px 45px;
+    border-radius: 8px;
+}
+.dashLine-cart { 
+    height: 0.07px;
+    width: 100%; 
+    background-color: rgba(0,0,0,0.3);
+    margin: 10px 0;
+ }
+
+/* CartLeft.js */
+.cart-collapse{
     display: flex;
-    justify-content: space-around; 
-    text-align: center;
+    align-items: center;
+    color: var(--mainDark);
+    margin: 20px 0 !important;
     width: 100%;
+    user-select: none; 
+}
+.cart-collapse p {
+    margin: 0;
+    padding: 0;
+}
+.cart-list{
+    text-align: center;
+} 
+.cart-list h3{
+    margin: 0 5px;
+} 
+.cart-image img{
+    width: 100%;
+    height: 100%;
+}
+.cart-icon{
+    font-size: 1.6rem;
+    color: var(--mainDark);
+    cursor: pointer;
+    transition: all .1s ease-out;
+}
+.cart-icon:hover{
+    background-color: red;
+    border-radius: 50%;
+    padding: 6px;
+    color: white;
+    transition: all .1s ease-out;
 }
 
-.cart-head-list, .cart-body-list {
-    width: 20%;
+/* Cart Right .js*/
+.btn-cart{
+    width: 30% !important;
+}
+
+@media only screen and (max-width: 991.5px){
+    .cart-left, .cart-right{ 
+        margin: 20px 20px !important; 
+    }
 }

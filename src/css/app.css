@@ -3,7 +3,8 @@ a {text-decoration: none; cursor: pointer;}
 .relative{position: relative;}
 .align-center {align-items: center;}
 .mainDark-color {color: var(--mainDark);}
-
+.red-color {color: red;}
+.black50-color {color: rgba(0,0,0,0.5);}
 :root{
     --mainDark : #2D3914;
     --secondDark : #7A973F;

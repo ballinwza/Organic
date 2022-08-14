@@ -1,6 +1,6 @@
 /* Product .js */
 .product-detail{ 
-  padding: 50px 40px; 
+  padding: 50px 40px;  
 }
 .product-image { 
   margin: 20px;
@@ -15,15 +15,18 @@
   display: flex;
   flex-wrap: wrap; 
   background-color: var(--secondDark); 
-  width: 100%;
+  width: 100%; 
 }
 .product-card-container{ 
   width: calc(100%/4); 
-  margin: 3.0rem 0; 
-  align-self: flex-end;
-}
-.product-card-container .even{ background-color: var(--secondLight); }
-.product-card-container .odd{ background-color: var(--thirdLight); }
+  margin: 30px 0; 
+  align-self: end; 
+
+} 
+
+.product-card-container:nth-child(odd) .product-card{ background-color: var(--thirdLight); }
+.product-card-container:nth-child(even) .product-card{ background-color: var(--secondLight);}
+
 .product-card { 
   position: relative; 
   text-align: center;

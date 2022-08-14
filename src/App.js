@@ -15,6 +15,8 @@ const UnauthApp = () =>{
         <Navbar/>
         <Routes>
           <Route path='/' element={<Product/>}/> 
+          <Route path='/cart' element={<Product/>}/> 
+          <Route path='/addCartItem' element={<Product/>}/>
           <Route path='/signin' element={<SignIn/>}/> 
         </Routes> 
       </div>

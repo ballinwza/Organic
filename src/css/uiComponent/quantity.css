@@ -1,0 +1,23 @@
+.quantity-container{
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    width: fit-content;
+    padding: 1px 0px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quantity-container .sign{
+    cursor: pointer;
+    color: var(--secondDark);
+    margin: 0 10px!important;
+    padding: 0 !important;
+}
+
+.quantity-container .num{
+    color: var(--mainDark);
+    margin: 0 5px !important;
+    padding: 0 !important;
+}
+

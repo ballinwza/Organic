@@ -1,7 +1,7 @@
  /* Main and Background */
  .signin-container{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 20;
     user-select: none;
  }
@@ -71,7 +71,7 @@
    background-color: rgba(0,0,0,0.5);
    position: sticky;
    z-index: 30;
-   height: 100vh; 
+   min-height: 100vh; 
    display: flex;
    justify-content: center;
 }
