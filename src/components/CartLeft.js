@@ -16,13 +16,13 @@ export const CartLeft = ()=>{
     const GetCartItem = ({item}) =>{
         return(
             <div className="cart-collapse row">
-                <div className="col-auto col-sm-3 m-auto">
-                    <div className="cart-list cart-image">
+                <div className="col-12 col-sm-3 m-auto">
+                    <div className="cart-image">
                         <img src={item.image} alt={item.title}/>
                     </div>
                 </div>
                 <div className="col-12 col-sm">
-                    <div className="cart-list">
+                    <div className="cart-list cart-list-title">
                         <p>{item.title.toUpperCase()}</p>
                     </div>
                 </div>
@@ -37,8 +37,9 @@ export const CartLeft = ()=>{
                     </div>
                 </div>
                 <div className="col-12 col-sm-1">
-                    <div className="cart-list" onClick={()=> dispatch(removeCart({...item, quantity: 0}))}>
+                    <div className="cart-list cart-list-last" onClick={()=> dispatch(removeCart({...item, quantity: 0}))}>
                         <FontAwesomeIcon icon={faTrash} className="cart-icon"/>
+                        <div className="mobile-cart-icon"><button className="btn btn-danger">Delete</button></div>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ export const removeCart = (id) =>{
     }
 } 
 
-export const decrementCart = (id) =>{
+export const decrementCart = (id) =>{ 
     return{
         type: DRECREMENT_CART,
         payload: id

@@ -18,7 +18,7 @@ export const cartReducer = (state= initialState, action)=>{
             }))
         }
         return update
-    }
+    } 
 
     switch(action.type){
         case ADD_TO_CART:
