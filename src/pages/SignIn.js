@@ -82,12 +82,12 @@ export const SignIn = () =>{
                     <div className="col-10 col-lg-7 m-auto">
                         <div className="row my-4">
                             <div className="col relative"><div className="dashLine"></div></div>
-                            <div className="col-2">OR</div>
+                            <div className="col-2"><p>OR</p></div>
                             <div className="col relative"><div className="dashLine"></div></div>
                         </div>
                     </div>
 
-                    <div className="col-12 col-lg-7 m-auto">
+                    <div className="col-12 col-lg-7 m-auto pb-5">
                         <span className="mainDark-color me-3">Not a Member?</span>
                         <Link to="/"><span>Register</span></Link>
                     </div>

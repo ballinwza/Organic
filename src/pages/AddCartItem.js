@@ -1,38 +1,19 @@
-import { useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { addCartList } from "../redux/actions/cartAction"
-import { useNavigate } from "react-router-dom" 
-import { showNavbar } from "../components/Navbar"
+import { showNavbar } from "../components/Navbar" 
+import {AddProductPart} from '../components/AddProductPart'
+import { AddPromotionPart } from "../components/AddPromotionPart"
 
-export const AddCartItem = () =>{
-    const [title, setTitle] = useState("")
-    const [price, setPrice] = useState(0)
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const cart = useSelector(state=>state.cart)
-    let sumData = {
-        id: cart.length + 1,
-        title: title,
-        price: parseInt(price),
-        quantity: 0
-    }
-
-    const afterAdd = () =>{
-        dispatch(addCartList(sumData)); 
-        if(title !== '' && parseInt(price) !== 0){
-            alert("Data is added")
-            navigate('/');
-        }else{
-            alert("Please fill information")
-        }
-    }
-
+export const AddCartItem = () =>{ 
     return(
-        <div onLoad={()=>showNavbar()}> 
-            title<input type="text" name="title" onChange={(e)=>setTitle(e.target.value)}/><br/>
-            price<input type="number" name="price" onChange={(e)=>setPrice(e.target.value)}/><br/>
+        <div className="gray-container add-container" onLoad={()=>showNavbar()}>
+            <div className="row">
+                <div className="col-12 col-md-7 col-xl-8">
+                    <AddProductPart/>
+                </div>
 
-            <button onClick={()=>afterAdd()}>Submit</button>
+                <div className="col-12 col-md col-xl">
+                    <AddPromotionPart/>
+                </div>
+            </div> 
         </div>
     )
 }

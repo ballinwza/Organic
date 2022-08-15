@@ -1,17 +1,10 @@
 /* Cart.js */
-.cart-container{
-    background-color: rgba(0,0,0,0.1);
+.cart-container{ 
     min-height: 89vh;
 }
 .cart-container h3 {
     margin: 0;
-}
-.cart-left, .cart-right{
-    background-color: var(--mainWhite);
-    margin: 50px 20px;
-    padding: 30px 45px;
-    border-radius: 8px;
-}
+} 
 .dashLine-cart { 
     height: 0.07px;
     width: 100%; 
@@ -56,7 +49,7 @@
     display: none;
 }
 .cart-icon:hover{
-    background-color: red;
+    background-color: var(--deleteColor);
     border-radius: 50%;
     padding: 6px;
     color: white;
@@ -94,7 +87,7 @@
     text-align: center;
 }
 .promotion-modal div { 
-    background-color: #d23341;
+    background-color: var(--deleteColor);
     width: 100%; 
     border-radius: 0.5rem 0.5rem 0 0;
     display: flex;

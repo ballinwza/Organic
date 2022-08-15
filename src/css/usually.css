@@ -1,0 +1,10 @@
+.gray-container{ 
+    background-color: rgba(0,0,0,0.1);
+} 
+
+.container-white-primary{
+    background-color: var(--mainWhite);
+    margin: 50px 20px;
+    padding: 30px 45px;
+    border-radius: 8px; 
+}

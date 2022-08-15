@@ -10,13 +10,13 @@
 }
 .myBtn151 {width: 15.1rem !important;}
 .myBtn:hover{
-    background-color: var(--mainWhite);
-    color: var(--mainDark);
+    background-color: var(--secondDark);
+    color: var(--mainWhite);
     transition: all .2s ease-out;
 }
 .myBtn:active{ 
     background-color: var(--mainDark);
-    color: white; 
+    color: var(--mainWhite); 
     transition: all .1s ease-out;
 }
 .btn-mainDark{ background-color: var(--mainDark)}

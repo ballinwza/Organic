@@ -10,6 +10,7 @@ import Modal from 'react-bootstrap/Modal';
 export const CartRight = () =>{
     const cart = useSelector(state=> state.cart) 
     const code = useSelector(state=>state.code)
+    const discount = useSelector(state=>state.discount)
     const dispatch = useDispatch()
     const totalPrice = cart.map(item=> item.quantity*item.price)
     const sumPrice = totalPrice.reduce((total, value)=>{return total + value}) 
@@ -47,7 +48,7 @@ export const CartRight = () =>{
             <div className="col-12">
                 <div className="cart-collapse"> 
                     <input type="text" placeholder="ABC123456" value={codeValue} onChange={(e)=>setCodeValue(e.target.value)}/>
-                    <button className="myBtn btn-mainDark btn-cart" onClick={()=>{dispatch(discountCode(codeValue))}}>APPLY</button>
+                    <button className="myBtn btn-mainDark btn-cart" onClick={()=>{dispatch(discountCode(discount, codeValue))}}>APPLY</button>
                 </div>
             </div>
             <div className="col-12">

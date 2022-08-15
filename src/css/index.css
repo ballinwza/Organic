@@ -1,6 +1,5 @@
 @import './app.css';
-@import './navbar.css';
-/* @import './test.css'; */
+@import './navbar.css'; 
 @import './cart.css';
 @import './product.css';
 
@@ -9,4 +8,6 @@
 @import './uiComponent/input.css';
 
 @import './bootstrap/modifyBootstrap.css';
-@import './uiComponent/quantity.css'
+@import './uiComponent/quantity.css';
+@import './usually.css';
+@import './addCartItem.css';

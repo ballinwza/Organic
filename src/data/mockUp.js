@@ -5,7 +5,7 @@ export const mockUp = [
         title: "maharatch",
         price: 699,
         quantity: 0,
-        image: require('../images/productCard-01.jpg')
+        image: require('../images/productCard-01.jpg') 
     },
     {
         id: 2,

@@ -5,16 +5,16 @@ import { CartRight } from "../components/CartRight"
 export const Cart = () =>{ 
 
     return(
-        <div className="cart-container" onLoad={()=>showNavbar()}>
+        <div className="gray-container cart-container" onLoad={()=>showNavbar()}>
             <div className="row">
                 <div className="col-12 col-lg-8">
-                    <div className="cart-left">
+                    <div className="cart-left container-white-primary">
                         <CartLeft/>
                     </div>
                 </div>
 
                 <div className="col-12 col-lg">
-                    <div className="cart-right">
+                    <div className="cart-right container-white-primary">
                         <CartRight/>
                     </div>
                 </div>
@@ -22,4 +22,4 @@ export const Cart = () =>{
             </div>
         </div>
     )    
-} 
+}  

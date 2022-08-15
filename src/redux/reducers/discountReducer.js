@@ -1,19 +1,17 @@
-import { disCode } from "../../data/discount"
-
 export const DISCOUNT = "DISCOUNT"
 export const ALERT = "ALERT" 
+
 
 const initialState = { 
     status: false,
     discount: 0
 } 
 
-export const discountReducer = (state=initialState, action) =>{
-
+export const discountReducer = (state=initialState, action) =>{ 
+    
     const findPromotion= () =>{
         let promo
-        let findPromo = disCode.find((item)=> item.code === action.payload) 
-
+        let findPromo = action.payload.find((item)=> item.code === action.value) 
         if(findPromo === undefined){ 
             promo = {
                 status: true,
@@ -27,6 +25,7 @@ export const discountReducer = (state=initialState, action) =>{
         }
         return promo
     }
+
     switch(action.type){
         case DISCOUNT :
             return findPromotion()
@@ -34,7 +33,7 @@ export const discountReducer = (state=initialState, action) =>{
             return{
                 ...state,
                 status: action.payload
-            }
+            } 
         default :
             return state
     }

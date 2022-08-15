@@ -20,4 +20,4 @@ export function signin(email, password){
             }
         }, 2000)
     })
-}
+} 

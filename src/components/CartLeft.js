@@ -3,7 +3,7 @@ import { removeCart, addCart, decrementCart } from "../redux/actions/cartAction"
 import { currency } from "./uiComponents/currency"
 import { Quantity } from "./uiComponents/Quantity" 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faTrash} from "@fortawesome/free-solid-svg-icons"
+import {faTrashCan} from "@fortawesome/free-solid-svg-icons"
 
 export const CartLeft = ()=>{
     const cart = useSelector(state=> state.cart)
@@ -38,7 +38,7 @@ export const CartLeft = ()=>{
                 </div>
                 <div className="col-12 col-sm-1">
                     <div className="cart-list cart-list-last" onClick={()=> dispatch(removeCart({...item, quantity: 0}))}>
-                        <FontAwesomeIcon icon={faTrash} className="cart-icon"/>
+                        <FontAwesomeIcon icon={faTrashCan} className="cart-icon"/>
                         <div className="mobile-cart-icon"><button className="btn btn-danger">Delete</button></div>
                     </div>
                 </div>
