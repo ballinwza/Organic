@@ -94,7 +94,7 @@ export const Navbar = () =>{
                                     <span className="nav-number">{cart.reduce((sum,item)=> sum + item.quantity,0)}</span>
                                 </Link> }
                             </li>
-                            <NavItem to="/addCartItem" id={navlist[2].id} className={navlist[2].status} content="Prodcut" onClick={()=>updateState(navlist[2].id)}/>
+                            <NavItem to="/addCartItem" id={navlist[2].id} className={navlist[2].status} content="Add" onClick={()=>updateState(navlist[2].id)}/>
                             <NavItem to="/" id={navlist[3].id} className={navlist[3].status} onClick={setNull} content="Sign Out"/>
                         </ul>
                     </div>

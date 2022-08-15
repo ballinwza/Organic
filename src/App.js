@@ -44,9 +44,7 @@ const App = ()=>{
 
   return(
     <BrowserRouter> 
-      {/* {!user ? <UnauthApp/> : <AuthApp/>} */}
-      <AuthApp/>
-      
+      {!user ? <UnauthApp/> : <AuthApp/>} 
     </BrowserRouter>
   )
 } 
