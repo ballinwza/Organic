@@ -2,10 +2,7 @@ import { currency } from "./uiComponents/currency"
 import { useSelector, useDispatch } from "react-redux"
 import { discountCode, alertDiscount  } from "../redux/actions/discountAction"
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import { ConfirmModal } from "./uiComponents/ConfirmModal"; 
 
 export const CartRight = () =>{
     const cart = useSelector(state=> state.cart) 
@@ -17,7 +14,11 @@ export const CartRight = () =>{
     const shippingFee = 20
     const discountPrice = sumPrice - code.discount - shippingFee
     const [ codeValue, setCodeValue ] = useState("")
-    const handleClose = () => dispatch(alertDiscount(false));
+
+    const handleClose = () => {
+        dispatch(alertDiscount(false));
+        setCodeValue("")
+    }
 
     const calDiscountPrice = () => {
         if (currency(discountPrice) <= 0){
@@ -29,15 +30,7 @@ export const CartRight = () =>{
 
     return(
         <div className="row" > 
-            <Modal show={code.status} onHide={handleClose} centered>
-                <Modal.Body >
-                    <div className="promotion-modal">
-                        <div><FontAwesomeIcon icon={faCircleXmark}/></div>
-                        <h2>Do not has Promotion code</h2>
-                        <Button className="btn-danger" onClick={handleClose}>Close</Button> 
-                    </div>
-                </Modal.Body> 
-            </Modal>
+            <ConfirmModal handleClose={handleClose} showValid={code.valid} showInvalid={code.invalid} validText="Promotion code was apply" invalidText="Invalid Promotion code"/>
 
             <div className="col-12">
                 <h3 className="mainDark-color">Promo Code</h3>

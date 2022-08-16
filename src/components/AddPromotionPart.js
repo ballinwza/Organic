@@ -3,10 +3,13 @@ import { useDispatch } from "react-redux"
 import { DefaultInput } from "../components/uiComponents/Input" 
 import { addPromotion } from "../redux/actions/discountAction" 
 import { useNavigate } from "react-router-dom"
+import { ConfirmModal } from "./uiComponents/ConfirmModal"
 export const AddPromotionPart = () =>{
 
     const [ promo, setPromo ] = useState("")
     const [ promoPrice, setPromoPrice ] = useState(null)
+    const [ validate, setValidate ] = useState(false)
+    const [ invalid, setInvalid ] = useState(false)
     const dispatch = useDispatch() 
     const navigate = useNavigate()
     
@@ -16,12 +19,24 @@ export const AddPromotionPart = () =>{
             value: parseInt(promoPrice),
         }
         dispatch(addPromotion(promoCode));
-        alert("add promotion success")
-        navigate("/cart")
-    } 
+        setValidate(true)
+        setTimeout(()=>{
+            setValidate(false) 
+            navigate("/cart")
+        },1000)
+    }
+
+    const handleClose = () =>{
+        setPromo("")
+        setPromoPrice(null)
+        setValidate(false) 
+        setInvalid(false)
+    }
 
         return(
             <div className="container-white-primary add-primary">
+                <ConfirmModal handleClose={handleClose} showValid={validate} showInvalid={invalid} validText="Promotion code was added" invalidText="Please fill Promotion code"/> 
+
                 <div className="col-12">
                     <h2>Add Promotion Code</h2>
                 </div>
@@ -37,7 +52,7 @@ export const AddPromotionPart = () =>{
                 </div>
                 <div className="col-12"><div className="dashLine-cart"></div></div>
                 <div className="col-12 add-btn">
-                    <button className="myBtn btn-mainDark " onClick={()=>getPromo()}>Submit</button>
+                    <button className="myBtn btn-mainDark " onClick={()=> promo === "" && promoPrice === null ? setInvalid(true) : getPromo()}>Submit</button>
                 </div>
             </div>
         )

@@ -1,27 +1,30 @@
 export const DISCOUNT = "DISCOUNT"
-export const ALERT = "ALERT" 
+export const ALERT = "ALERT"
 
 
-const initialState = { 
-    status: false,
+const initialState = {
+    valid: false,
+    invalid: false,
     discount: 0
-} 
+}
+ 
+export const discountReducer = (state=initialState, action) =>{
 
-export const discountReducer = (state=initialState, action) =>{ 
-    
     const findPromotion= () =>{
         let promo
-        let findPromo = action.payload.find((item)=> item.code === action.value) 
-        if(findPromo === undefined){ 
+        let findPromo = action.payload.find((item)=> item.code === action.value)
+        if(findPromo === undefined){
             promo = {
-                status: true,
+                valid: false,
+                invalid: true,
                 discount: 0
-            } 
-        }else{ 
+            }
+        }else{
             promo = {
-                status: false,
+                valid: true,
+                invalid: false,
                 discount: findPromo.value
-            } 
+            }
         }
         return promo
     }
@@ -29,11 +32,12 @@ export const discountReducer = (state=initialState, action) =>{
     switch(action.type){
         case DISCOUNT :
             return findPromotion()
-        case ALERT : 
+        case ALERT :
             return{
                 ...state,
-                status: action.payload
-            } 
+                valid: false,
+                invalid: false,
+            }
         default :
             return state
     }

@@ -3,8 +3,9 @@
 ### Workshop using React && Redux
 <br>
 
-*** *__ยังไม่เสร็จสมบูรณ์__* 
-<br>เหลือ popup นิดหน่อย และนำขึ้น firebase 
+*** **__Finished 100%__* * 
+
+[Organic Website](https://organic-wk.web.app/)
 
 ไม่มีฐานข้อมูลใช้การจำลองข้อมูลผ่าน state ทั้งหมด
 

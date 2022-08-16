@@ -74,41 +74,7 @@
     font-size: 1.3rem;
 }
 
-/* Promotion Modal */
-.modal-content{
-    box-shadow: none;
-    border: none;
-}
-.modal-body{
-    margin: 0;
-    padding: 0;
-}
-.promotion-modal {
-    text-align: center;
-}
-.promotion-modal div { 
-    background-color: var(--deleteColor);
-    width: 100%; 
-    border-radius: 0.5rem 0.5rem 0 0;
-    display: flex;
-    height: 100px;
-    justify-content: center; 
-}
-.promotion-modal div svg {
-    align-self: center;
-    font-size: 5rem;
-    color: white;
-}
-.promotion-modal h2{
-    margin: 50px 0;
-}
-.promotion-modal button{
-    font-size: 1.6rem;
-    margin: 0px 0 30px 0;
-    padding: 10px 0;
-    width: 40%;
-    border-radius: 30px;
-}
+
 
 /* Responsive */
 @media only screen and (max-width: 991.5px){
@@ -124,7 +90,7 @@
         font-size: 1.4rem !important;
     }
     .summary-font{
-        font-size: 1.1rem; 
+        font-size: 1.1rem;  
     }
     .summary-font span{
         font-size: 1.1rem;

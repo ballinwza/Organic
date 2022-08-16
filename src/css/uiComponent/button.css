@@ -20,7 +20,10 @@
     transition: all .1s ease-out;
 }
 .btn-mainDark{ background-color: var(--mainDark)}
-
+.btn-danger {background-color: var(--deleteColor);}
+.btn-success { background-color: var(--secondDark);}
+.btn-success:hover { background-color: var(--mainDark); border-color: var(--mainDark);}
+.btn-success:active { --bs-btn-active-shadow: none;}
 .btn-container{
     width: 100%;
 }

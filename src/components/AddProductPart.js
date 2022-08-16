@@ -6,6 +6,7 @@ import ImageUploading from "react-images-uploading"
 import { DefaultInput } from "./uiComponents/Input"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons" 
+import { ConfirmModal } from "./uiComponents/ConfirmModal"
 
 export const AddProductPart = () =>{
     const [title, setTitle] = useState("")
@@ -13,13 +14,13 @@ export const AddProductPart = () =>{
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const cart = useSelector(state=>state.cart)
+    const [ validate, setValidate ] = useState(false)
+    const [ invalid, setInvalid ] = useState(false)
 
     const [images, setImages] = useState([]);
     const maxNumber = 1;
 
-    const onChange = (imageList, addUpdateIndex) => {
-        // data for submit
-        console.log(imageList, addUpdateIndex);
+    const onChange = (imageList, addUpdateIndex) => { 
         setImages(imageList);
     }; 
 
@@ -29,21 +30,29 @@ export const AddProductPart = () =>{
             title: title,
             price: parseInt(price),
             quantity: 0,
-            image: `${images[0].checkUrl}`
+            image: images[0]===undefined ? "" : `${images[0].checkUrl}`
         }
 
         if(title !== '' && parseInt(price) !== 0 && images.length !== 0){
             dispatch(addCartList(sumData));
-            alert("Data is added")
-            navigate('/');
+            setValidate(true)
+            setTimeout(()=>{ 
+                setValidate(false) 
+                navigate('/');
+            },1000)
         }else{
-            alert("Please fill information")
+            setInvalid(true)
         }
     } 
 
+    const handleClose = () =>{
+        setInvalid(false)
+        setValidate(false) 
+    } 
 
         return(
             <div className="container-white-primary add-primary">
+                <ConfirmModal handleClose={handleClose} showValid={validate} showInvalid={invalid} validText="Product was apply" invalidText="Please fill product detail"/> 
                 <div className="col-12">
                     <h2>Add Product</h2>
                 </div>
